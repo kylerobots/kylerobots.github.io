@@ -13,3 +13,18 @@ minimal_mistakes_skin: "air"
 plugins:
   - jekyll-feed
   - jekyll-include-cache
+
+include: ["_pages"]
+
+collections:
+  tutorials:
+    output: true
+    permalink: /:collection/:path/
+defaults:
+  - scope:
+      path: ""
+      type: tutorials
+    values:
+      layout: single
+      author_profile: true
+      share: true
