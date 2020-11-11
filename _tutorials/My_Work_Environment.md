@@ -100,38 +100,110 @@ migrate to a new system. For initial configuration, I downloaded every extension
 and settings for each. Depending on how complete you want to be, this can take a bit to go through everything. Fortunately, this doesn't have to be done
 at once. The sync functionality will keep things updated.
 
-After completing this, I turned on the new syncing feature (XXX - put link). This feature was released in 2020 and syncs extensions, keyboard shortcuts, and settings across
-any synced instance. It uses your GitHub account (and possibly some other options) to store the information. To enable it, go to (XXX - put description and a picture)
-Once synced, any change you make will propagate across all of your signed in copies. If you set up a new machine and turn on sync it will download everything. It also
-warns you if there are conflicts and asks you to resolve them before continuing.
+After completing this, I turned on the new [syncing feature](https://code.visualstudio.com/docs/editor/settings-sync). This feature was released in 2020 and syncs
+extensions, keyboard shortcuts, and settings across any synced instance. It uses your GitHub account (and possibly some other options) to store the information.
+To enable it, follow the instructions at the link above. Once synced, any change you make will propagate across all of your signed in copies. If you set up a
+new machine and turn on sync it will download everything. It also warns you if there are conflicts and asks you to resolve them before continuing.
 
 Additionally, it also has the ability to ignore certain settings. This comes in particularly useful for computer specific information. For example, I use
-a different location to build projects on each computer (due to hard drive size differences). So this setting is disabled, as shown (XXX - put picture).
+a different location to build projects on each computer (due to hard drive size differences). So this setting is disabled, as shown in the screenshot below.
 
-Beyond the customizations and preferences, there are a few settings I had to specify to work with the build tools I downloaded. Typically, these are
-settings to point to specific files. They are as follows:
+{% include figure image_path="/assets/images/VSCodeSettingIgnore.png" alt="An extension setting that is ignored" caption="The Install Prefix setting is unique to each computer" %}
 
-(XXX - put table with settings and descriptions here)
+If all the various build tools are on your PATH, then there typically aren't any additional settings that need changed in VS Code. If not, you might need
+to tell it where to find CMake and MinGW.
 
-Additionally, I ran the "scan for new kits" command for the CMake extension. This searches your path for all available build and compile systems. This
-is necessary to allow it to find both MinGW and MSVC. After successfully running, the (XXX - local setting file?) should look something like this:
-(XXX - picture of settings)
+Additionally, I ran the *CMake: Scan for Kits* command for the CMake extension. This searches your path for all available compile systems. This is necessary to
+allow it to find both MinGW and MSVC. After successfully running, the *cmake-tools-kits.json* file, found by running `CMake: Edit User-Local CMake Kits` should
+look something like this:
+```json
+[
+  {
+    "name": "GCC 8.1.0",
+    "compilers": {
+      "C": "C:\\ProgramData\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\gcc.exe",
+      "CXX": "C:\\ProgramData\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\g++.exe"
+    },
+    "preferredGenerator": {
+      "name": "MinGW Makefiles"
+    },
+    "environmentVariables": {
+      "CMT_MINGW_PATH": "C:\\ProgramData\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin"
+    }
+  },
+  {
+    "name": "GCC for x86_64-w64-mingw32 8.1.0",
+    "compilers": {
+      "C": "C:\\ProgramData\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\x86_64-w64-mingw32-gcc.exe",
+      "CXX": "C:\\ProgramData\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin\\x86_64-w64-mingw32-g++.exe"
+    },
+    "preferredGenerator": {
+      "name": "MinGW Makefiles"
+    },
+    "environmentVariables": {
+      "CMT_MINGW_PATH": "C:\\ProgramData\\chocolatey\\lib\\mingw\\tools\\install\\mingw64\\bin"
+    }
+  },
+  {
+    "name": "Visual Studio Build Tools 2019 Release - amd64",
+    "visualStudio": "6c93218f",
+    "visualStudioArchitecture": "x64",
+    "preferredGenerator": {
+      "name": "Visual Studio 16 2019",
+      "platform": "x64",
+      "toolset": "host=x64"
+    }
+  },
+  {
+    "name": "Visual Studio Build Tools 2019 Release - amd64_x86",
+    "visualStudio": "6c93218f",
+    "visualStudioArchitecture": "x64",
+    "preferredGenerator": {
+      "name": "Visual Studio 16 2019",
+      "platform": "win32",
+      "toolset": "host=x64"
+    }
+  },
+  {
+    "name": "Visual Studio Build Tools 2019 Release - x86",
+    "visualStudio": "6c93218f",
+    "visualStudioArchitecture": "x86",
+    "preferredGenerator": {
+      "name": "Visual Studio 16 2019",
+      "platform": "win32",
+      "toolset": "host=x86"
+    }
+  },
+  {
+    "name": "Visual Studio Build Tools 2019 Release - x86_amd64",
+    "visualStudio": "6c93218f",
+    "visualStudioArchitecture": "x86",
+    "preferredGenerator": {
+      "name": "Visual Studio 16 2019",
+      "platform": "x64",
+      "toolset": "host=x86"
+    }
+  }
+]
+```
 
-You can test that it can find all of the needed tools by creating a sample project using the CMake extension's (XXX - command here) command. It makes a hello
+You can test that it can find all of the needed tools by creating a sample project using the CMake extension's `CMake: Configure` command. It makes a hello
 world project and you should be able to successfully compile and run it with each build system that you use. Note that you might have to delete your build
-folder when switching between systems though.
+folder when switching between systems though. You can find more information on their CMake extension [here](https://code.visualstudio.com/docs/cpp/cmake-linux).
 
 # Clang-Format #
 This was also pretty easy. VScode has a local copy of clang-format, so I don't need to install all of LLVM. I just need to define a .clang-format file. To
-help with that, I use (XXX - That website to build them) to build the file.  The format tool searches up through the directory when applying formatting, so
-I put this at the top level of my account, in the same spot as my Git configuration files. I also store this file with the rest of my configuration files
-for use on new systems.
+help with that, I use [the clang-format configurator site](https://zed0.co.uk/clang-format-configurator/) to build the file. The format tool searches up
+through the directory when applying formatting, so I put this at the top level of my account, in the same spot as my Git configuration files. I also store this
+file with the rest of my configuration files for use on new systems.
 
 # Qt Creator #
-If everything else is done right, this part is actually pretty easy. When installing, make sure to download Qt versions that support the compilers in use.
-In my case, this is MSVC and MinGW 64bit. You can also uncheck the install of CMake, since it is already on your system. After install, it should recognize all
-the right build systems since they are on your PATH. Verify this by going in to properties and (XXX - kit locations). You might have to click (XXX - rescan command). You should see something similar to this.
-(XXX - put screenshot)
+If everything else is done right, this part is actually pretty easy. The download can be found [here](https://www.qt.io/product/development-tools) When
+installing, make sure to download Qt versions that support the compilers in use. In my case, this is MSVC and MinGW 64bit. You can also uncheck the install of
+CMake, since it is already on your system. After install, it should recognize all the right build systems since they are on your PATH. Verify this by going in
+to *Tools > Options*. There are several tabs to check. *Compilers* should show your compilers. You might have to click *Re-detect* to search for them if they
+aren't found already. You should see something similar to this.
+{% include figure image_path="/assets/images/QtCreatorCompilerSettings.png" alt="A list of detected compilers that Qt Creator can use" caption="The detected compilers. Note how they are all automatically detected." %}
 Make sure it can also find your CMake application, which is on a different tab. If so, then Qt Creator can successfully create projects with any build system
 that you use.
 
@@ -140,11 +212,13 @@ You can then export the keyboard shortcuts as a file, so I did that for future s
 it isn't possible to export settings in the same way, so any customization there will need to be duplicated by hand on new machines.
 
 Lastly, I configured code formatting within the IDE. Since there is already an instance of clang-format on the computer, I prefered used that. To do that, make sure
-the (XXX) plugin is enabled in (XXX). Then, go to Preferences>(XXX) and set the location of clang-format. It ispo generally found as shown in the picture.
-(XXX- picture of the preference window)
-As with VS Code, it must find a formating file. If your .clang-format file is at the top level of your space, it will be able to find it without issue.
+the *ClangFormat* plugin is enabled under *Help > About Plugins*. Then, go to *Tools > Options > Beautifier > Clang Format* and set the location of clang-format.
+Since it is part of VS Code, it is likely found at *C:\Users\user\\.vscode\extensions\ms-vscode.cpptools-1.0.1\LLVM\bin\clang-format.exe* Also make sure to tell
+the Beautifier to use ClangFormat on the *General* tab.
 
-Lastly, while not essential to functionality, I configure the default project directory to a specific spot on my computer. I alsoset the default build directory
+As with VS Code, this linter must also find a formating file to use. If your .clang-format file is at the top level of your space, it will be able to find it without issue.
+
+Lastly, while not essential to functionality, I configure the default project directory to a specific spot on my computer. I also set the default build directory
 to be a subfolder within a given project. This is to mimic my setup in VS Code.
 
 Once this is done, Qt Creator is configured. You should be able to create a test project and build it with multiple compilers.
