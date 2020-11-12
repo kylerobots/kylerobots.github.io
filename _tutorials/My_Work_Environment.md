@@ -34,8 +34,21 @@ containers, and documentation. The full list is as follows:
 # The Short Version #
 To skip all the context for why these steps are done, just follow this list.
 1. [Install Chocolatey](https://chocolatey.org/install)
-2. Use Chocolatey to install each other component, except Qt Creator
-3. 
+2. Use Chocolatey to install each other component, except Qt Creator. Use the config file displayed below.
+3. Make sure all necessary locations are on your PATH, as shown in the chart below.
+4. Pip install pipenv.
+5. (*Sometimes*) Add user to docker-users group with `Add-LocalGroupMember -Group "docker-users" -Member "<username>"`
+6. Create .gitconfig and .gitignore files at your home directory.
+7. Install VS Code extensions and tweak settings and keyboard shortcuts.
+8. Ensure VS Code can see CMake executable and compilers by making test program with `CMake: Configure`
+9. If that doesn't work, set the path to CMake in settings and use `[Scan for Kits]`.
+10. Turn on VS Code setting sync.
+11. Create a .clang-format file at your home directory.
+12. [Install Qt Creator](https://www.qt.io/product/development-tools). Make sure to select the right versions to match the compiler.
+13. Verify that all the compilers, CMake, and associated kits are correct. Manually add any that aren't.
+14. Set up ClangFormat through the Beautifier plugin. Point it to the clang-format executable that comes with VS Code.
+15. Configure any other settings like keyboard shortcuts.
+16. Test that Qt Creator can make a simple project with the desired compilers.
 
 # Setup Steps #
 First, all of the tools need to be installed. Fortunately, this is easy using [Chocolatey](https://chocolatey.org/). To install it, just
@@ -71,9 +84,10 @@ computer. Also, some of these may exist already if the installer added them.
 | C:\Program Files\doxygen\bin | Location of Doxygen's executable |
 | C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin | Location of the MinGW compiler |
 | C:\Program Files\Git\cmd | Location of Git |
-| C:\Python39\Scripts\ | Python location |
-| C:\Python39\ | Python location |
-| C:\Users\user\AppData\Roaming\Python\Python39\Scripts | Additional Python location |
+| C:\Python39\Scripts\ | Python location, will change depending on version |
+| C:\Python39\ | Python location, will change depending on version |
+| C:\Users\user\AppData\Roaming\Python\Python39\Scripts | Additional Python location, will change depending on version |
+| C:\Program Files\CMake\bin | CMake location |
 
 On the off chance that I use Python for a project, I like to keep separate workspaces with their own packages. For this, I use
 [Pipenv](https://docs.pipenv.org/). The default install of Python already comes with pip, so it is just a simple matter of running:
