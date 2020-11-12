@@ -7,6 +7,15 @@ baseurl: ""
 # the base hostname & protocol for your site, e.g. http://example.com
 url: "https://kylerobots.github.io"
 
+# Author information
+author:
+  name: "kylerobots"
+  bio: "A robotics engineer who enjoys tinkering with different programming projects in their very limited spare time."
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/kylerobots"
+
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes"
 minimal_mistakes_skin: "dirt"
