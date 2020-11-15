@@ -1,6 +1,5 @@
 ---
 title: My Work Environment
-toc: true
 classes: wide
 ---
 # Introduction #
