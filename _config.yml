@@ -34,6 +34,7 @@ defaults:
       path: ""
       type: tutorials
     values:
-      layout: single
       author_profile: true
+      layout: single
+      toc: true
       share: true
