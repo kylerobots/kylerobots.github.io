@@ -148,7 +148,8 @@ gem "github-pages", group: :jekyll_plugins
 information about your site that Jekyll needs, including the theme you are using. There are a ton of configuration settings
 that are very well documented [here](https://mmistakes.github.io/minimal-mistakes/docs/configuration/). These are just the
 ones needed to get it up and running.
-```yml
+
+``` yaml
 title: kylerobots personal site
 description: >- # this means to ignore newlines until "baseurl:"
   This is my simple website to showcase some of the neat projects that
@@ -164,6 +165,7 @@ plugins:
   - jekyll-feed
   - jekyll-include-cache
 ```
+
 3. Create a page for your homepage called *index.md* at the root level. You can just use the default layout provided by
 Minimal Mistakes or customize your own.
 ```markdown
