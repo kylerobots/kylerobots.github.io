@@ -2,7 +2,6 @@
 title: My Work Environment
 classes: wide
 ---
-# Introduction #
 I have a rather unusual development setup, including multiple devices. Additionally, I hate spending time configuring
 the same things across each device, as I inevitably miss something. Especially for things like keyboard shortcuts, it is
 important to me to have consistency so that I don't have to remember which keys to press based on which computer I use.
