@@ -1,7 +1,7 @@
 ---
 title: Setting up a GitHub Pages Space with Minimal Mistakes
+classes: wide
 ---
-# Introducton #
 This guide walks through the setup process for GitHub pages using Jekyll. Specifically, it uses the
 [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) theme. Minimal Mistakes is a theme that is already
 set up with a variety of templates. Because a lot of it is configured already, it is easy to use, powerfule, and looks
@@ -186,8 +186,64 @@ something like the image below!
 {% include figure image_path="/assets/images/BasicPages.png" alt="A bare bones Jekyll page" caption="The URL should show something like this." %}
 
 If not, double check that your configuration file is correct. If it does work, congrats! You have the basics needed to host your own GitHub pages!
-There is a ton of content that you can add, so explore everything in the theme's
-[Quickstart Guide](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/) for things to use. In particular, the sections on
-*Working with Posts*, *Working with Pages*, and *Working with Collections* is all incredibly useful. Note that there might be a bug on collections
-that keeps you from putting all your collections in a sub-directory like it says. I had trouble getting it to work. You can also create a custom
-404 page by creating a file called *404.html* and customizing it as desired.
+
+# Further Improvements #
+Obviously, the page is pretty basic. This section highlights a few things that can be done with the site. This is by no means
+exhaustive, so check the [Quickstart Guide](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/) for all
+the information.
+
+A quick note on updating though. If you modify the *_config.yml* file, you will need to relaunch the local host. It won't
+update automatically. Any other page supposedly will trigger an update, but I've found it to be hit or miss.
+
+## Author Information ##
+One of the neat aspects to this theme is the ability to have author information display on each page. Fortunately, you
+only have to customize it once.
+
+{% include figure image_path="/assets/images/ExamplePageWithAuthorAndBanner.png" alt="A GitHub page with author information
+displayed on the left and a banner of links at the top of the page." caption="This page presents my personal information
+automatically." %}
+
+To add it, there are a number of fields that get added to the *_config.yml* file, like so.
+
+``` yaml
+author:
+  name: "kylerobots"
+  bio: "A robotics engineer who enjoys tinkering with different programming projects in their very limited spare time."
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/kylerobots"
+```
+
+There is actually a lot more customization that can be added, just take a look at the documentation.
+
+## Collections ##
+These are helpful for a grouping of related pages. I use this to group all of my tutorials together.
+
+{% include figure image_path="/assets/images/ExampleCollections.png" alt="A GitHub page featuring a collection of related
+pages, automatically arranged according to the layout." caption="This is a collection of pages. Any new tutorial will
+automatically show up here." %}
+
+The instructions on collections located [here](https://jekyllrb.com/docs/collections/) and
+[here](https://mmistakes.github.io/minimal-mistakes/docs/collections/) are pretty good. The only thing I note is that the
+```collections_dir``` setting doesn't seem to allow subdirectories. In other words, each collection's folder exists at the
+top level. I might just be doing something wrong though.
+
+## Banner Links ##
+I also like the ability to add a banner of common links at the top of the page.
+
+{% include figure image_path="/assets/images/ExamplePageWithAuthorAndBanner.png" alt="A GitHub page with author information
+displayed on the left and a banner of links at the top of the page." caption="The same page as before also has a banner of useful
+links at the top, although there is only one link at the moment." %}
+
+This makes it easy to navigate around the site. To customize what goes there, create a folder called *_data* if one doesn't exist
+already. The, create a file within it called *navigation.yml*. Place as many links as you want to appear in the file like so.
+
+``` yaml
+main:
+  - title: "Tutorials"
+    url: tutorials
+```
+
+Extras will collapse down in the banner. For more information, see the usage guide on this file, located
+[here](https://mmistakes.github.io/minimal-mistakes/docs/navigation/)
