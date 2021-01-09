@@ -6,6 +6,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: ""
 # the base hostname & protocol for your site, e.g. http://example.com
 url: "https://kylerobots.github.io"
+repository: "kylerobots/kylerobots.github.io"
 
 # Author information
 author:
@@ -44,6 +45,7 @@ defaults:
     values:
       layout: single
       author_profile: true
+      show_date: true
       read_time: true
       comments: true
       share: true
