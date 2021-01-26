@@ -3,5 +3,7 @@ main:
     url: blog
   - title: "Tutorials"
     url: tutorials
+  - title: "Projects"
+    url: projects
   - title: "About"
     url: /2021/01/01/Intro.html
