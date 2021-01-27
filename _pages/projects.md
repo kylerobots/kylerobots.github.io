@@ -15,6 +15,14 @@ k_armed_bandit:
       title: "K-Armed Bandit"
       excerpt: "A modular collection of K-Armed Bandits and associated reinforcement learning agents to solve them."
       url: https://kylerobots.github.io/k-armed-bandit/
+algorithm:
+    - image_path: assets/images/Algorithm.jpg
+      overlay_color: "#000"
+      overlay_filter: "0.5"
+      alt: "A computer with code displayed on it."
+      title: "Algorithms"
+      excerpt: "Some practice code from my Algorithms course."
+      url: https://kylerobots.github.io/algorithms/
 mnist_viewer:
     - image_path: assets/images/MnistExamples.png
       alt: "A set of handwritten digits"
@@ -24,4 +32,5 @@ mnist_viewer:
 ---
 {% include feature_row id="intro" type="center" %}
 {% include feature_row id="k_armed_bandit" type="left" %}
-{% include feature_row id="mnist_viewer" type="right" %}
+{% include feature_row id="algorithm" type="right" %}
+{% include feature_row id="mnist_viewer" type="left" %}
