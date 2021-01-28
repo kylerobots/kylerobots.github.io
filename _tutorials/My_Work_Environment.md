@@ -1,6 +1,7 @@
 ---
 title: My Work Environment
 classes: wide
+tag: Workflow
 ---
 I have a rather unusual development setup, including multiple devices. Additionally, I hate spending time configuring
 the same things across each device, as I inevitably miss something. Especially for things like keyboard shortcuts, it is
@@ -223,12 +224,12 @@ From there, I went through and set up all the keyboard shortcuts. I basically ju
 You can then export the keyboard shortcuts as a file, so I did that for future systems. This is also stored with all my other configuration files. Unfortunately,
 it isn't possible to export settings in the same way, so any customization there will need to be duplicated by hand on new machines.
 
-Lastly, I configured code formatting within the IDE. Since there is already an instance of clang-format on the computer, I prefered used that. To do that, make sure
+Lastly, I configured code formatting within the IDE. Since there is already an instance of clang-format on the computer, I preferred used that. To do that, make sure
 the *ClangFormat* plugin is enabled under *Help > About Plugins*. Then, go to *Tools > Options > Beautifier > Clang Format* and set the location of clang-format.
 Since it is part of VS Code, it is likely found at *C:\Users\user\\.vscode\extensions\ms-vscode.cpptools-1.0.1\LLVM\bin\clang-format.exe* Also make sure to tell
 the Beautifier to use ClangFormat on the *General* tab.
 
-As with VS Code, this linter must also find a formating file to use. If your .clang-format file is at the top level of your space, it will be able to find it without issue.
+As with VS Code, this linter must also find a formatting file to use. If your .clang-format file is at the top level of your space, it will be able to find it without issue.
 
 Lastly, while not essential to functionality, I configure the default project directory to a specific spot on my computer. I also set the default build directory
 to be a subfolder within a given project. This is to mimic my setup in VS Code.
