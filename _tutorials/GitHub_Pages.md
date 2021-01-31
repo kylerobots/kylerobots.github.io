@@ -1,10 +1,11 @@
 ---
 title: Setting up a GitHub Pages Space with Minimal Mistakes
 classes: wide
+tag: Workflow
 ---
 This guide walks through the setup process for GitHub pages using Jekyll. Specifically, it uses the
 [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/) theme. Minimal Mistakes is a theme that is already
-set up with a variety of templates. Because a lot of it is configured already, it is easy to use, powerfule, and looks
+set up with a variety of templates. Because a lot of it is configured already, it is easy to use, powerful, and looks
 pretty sharp. I selected it because I liked the way collections can be displayed. The ability to put tables of contents
 and side panels on each page is an additional benefit. There are plenty of other themes out there though. For more, take
 a look [here](https://jekyllrb.com/docs/themes/). For an overview of Jekyll, see [their site](https://jekyllrb.com/).
@@ -189,7 +190,7 @@ If not, double check that your configuration file is correct. If it does work, c
 
 # Further Improvements #
 Obviously, the page is pretty basic. This section highlights a few things that can be done with the site. This is by no means
-exhaustive, so check the [Quickstart Guide](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/) for all
+exhaustive, so check the [Quick Start Guide](https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/) for all
 the information.
 
 A quick note on updating though. If you modify the *_config.yml* file, you will need to relaunch the local host. It won't
