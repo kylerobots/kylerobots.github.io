@@ -95,12 +95,12 @@ jobs:
       - name: Pages Deployment
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ "{{ secrets.GITHUB_TOKEN " }}}}
           publish_dir: ./docs/html/
           enable_jekyll: false
           allow_empty_commit: false
           force_orphan: true
-		  publish_branch: github-pages
+          publish_branch: github-pages
 ```
 
 There are three steps, plus the trigger for the action.
@@ -138,12 +138,12 @@ folder structure as the one running the Action.
 - name: Pages Deployment
   uses: peaceiris/actions-gh-pages@v3
   with:
-    github_token: ${{ secrets.GITHUB_TOKEN }}
+    github_token: ${{ "{{ secrets.GITHUB_TOKEN " }}}}
     publish_dir: ./docs/html/
     enable_jekyll: false
     allow_empty_commit: false
     force_orphan: true
-	publish_branch: github-pages
+    publish_branch: github-pages
 ```
 After documentation is generated, this action commits the documentation to a separate branch.
 [The site](https://github.com/marketplace/actions/github-pages-action) has very extensive information on all the
