@@ -23,6 +23,13 @@ algorithm:
       title: "Algorithms"
       excerpt: "Some practice code from my Algorithms course."
       url: https://kylerobots.github.io/algorithms/
+turtlesim_teleop:
+    - image_path: assets/images/Turtle.jpg
+      alt: "A turtle swimming in the water."
+      title: turtlesim_teleop
+      excerpt: "A ROS2 package to control the turtlesim demonstration via keyboard. This is mainly to practice working
+      with ROS2."
+      url: https://kylerobots.github.io/turtlesim_teleop/
 mnist_viewer:
     - image_path: assets/images/MnistExamples.png
       alt: "A set of handwritten digits"
@@ -33,4 +40,5 @@ mnist_viewer:
 {% include feature_row id="intro" type="center" %}
 {% include feature_row id="k_armed_bandit" type="left" %}
 {% include feature_row id="algorithm" type="right" %}
-{% include feature_row id="mnist_viewer" type="left" %}
+{% include feature_row id="turtlesim_teleop" type="left" %}
+{% include feature_row id="mnist_viewer" type="right" %}
