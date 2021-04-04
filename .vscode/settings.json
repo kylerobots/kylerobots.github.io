@@ -21,6 +21,7 @@
 		"noninteractive",
 		"peaceiris",
 		"subfolders",
-		"toolset"
+		"toolset",
+		"turtlesim"
 	]
 }
