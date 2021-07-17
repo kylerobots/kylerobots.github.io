@@ -29,3 +29,8 @@ TBD
 - K. M. Hart, “Automatic Generation of Machine Learning Synthetic Data Using ROS,” presented at the HCI International 2021, Virtual, Jul. 25, 2021.
 - K. Hart, “Towards Autonomous Weapons Movement on an Aircraft Carrier: Autonomous Swarm Parking,” presented at the HCI International 2018, Las Vegas, NV, Jul. 18, 2018.
 
+## Interest Areas ##
+- Monocular SLAM using only ground textures
+- Autonomous operations in sparse/restrictive environments
+- Autonomous architectures
+- Quality software development practices
