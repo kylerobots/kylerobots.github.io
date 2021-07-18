@@ -12,7 +12,7 @@ repository: "kylerobots/kylerobots.github.io"
 author:
   name: "Kyle M. Hart"
   avatar: "/assets/images/Headshot.jpg"
-  bio: "He/Him. Part-time robotics PhD candidate. Full-time lab director. Sometime have a spare moment."
+  bio: "He/Him. Part-time robotics PhD candidate. Full-time lab director. Sometime has a spare moment."
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
