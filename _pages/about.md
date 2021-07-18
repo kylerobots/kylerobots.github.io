@@ -11,13 +11,93 @@ author_profile: true
 I am a passionate, self-driven robotics researcher. Since growing up with Star Wars, I have always been fascinated with
 robotics. I've turned that interest into a fulfilling career that has allowed me to hone my researching abilities while
 also gaining experience in overseeing a broader research portfolio. Recently, I have expanded this knowledge even
-further this knowledge by embarking on a part-time PhD program in addition to my full-time career.
+further by embarking on a part-time PhD program in addition to my full-time career.
 
 ## Work Experience ##
-TBD
+<div class="title">
+	Lab Director
+</div>
+<div class="dates">
+	2018-Present
+</div>
+<div style="clear:both;"></div>
+
+Robotics and Intelligent Systems Engineering Lab, Department of the Navy
+- Lead a lab of 6 full time researchers, 2 part time researchers, and numerous rotations and interns with an annual operating budget of approximately $1.3M.
+- Develop the lab's strategic roadmap and ensure team has requisite support for executing to the roadmap.
+- Represent the lab throughout the command and greater robotics community, including briefs to Admirals and other executives.
+- Develop and document best practices such as code reviews and lab 101 tutorials for new employees.
+
+<div class="title">
+	Robotics Integration Lead
+</div>
+<div class="dates">
+	2018-Present
+</div>
+<div style="clear:both;"></div>
+
+Robotics and Intelligent Systems Engineering Lab, Department of the Navy
+- Use R&D roadmaps to develop relevant project proposals, landing 8 projects for $1.25M in funding.
+- Lead multiple projects, including tracking funding, annual reports, publications, and documentation. Projects include:
+	- Ground texture SLAM system
+	- Neural networks for automated deck tracking
+	- Autonomous recovery of an EOD robot
+- Design robot component integration framework to speed integration of sensors for tests.
+
+<div class="title">
+	Robotics Engineer
+</div>
+<div class="dates">
+	2013-2018
+</div>
+<div style="clear:both;"></div>
+
+Robotics and Intelligent Systems Engineering Lab, Department of the Navy
+- Work with other autonomy researchers on autonomy and AI projects. Examples include:
+	- Parking arbitrarily sized swarms on a carrier.
+	- Sensor fusion for localization in degraded environments, particularly fog.
+	- Surveys of the impact of autonomous manipulation on deck operations.
+- Spearhead lab best practices related to version control and issue tracking.
 
 ## Education ##
-TBD
+<div class="title">
+	Doctor of Philosophy, Mechanical Engineering
+</div>
+<div class="dates">
+	Ongoing
+</div>
+<div style="clear:both;"></div>
+
+[Robust Field Autonomy Lab](https://robustfieldautonomylab.github.io/people.html), Stevens Institute of Technology
+
+*Advisor*: [Dr. Brendan Englot](https://faculty.stevens.edu/benglot)
+
+*Potential Research*: Monocular SLAM using Ground Textures
+
+<div class="title">
+	Master of Engineering, Mechanical Engineering
+</div>
+<div class="dates">
+	2013
+</div>
+<div style="clear:both;"></div>
+
+Lehigh University
+
+Researched a tricycle based LIDAR mapping platform
+
+<div class="title">
+	Bachelor of Science, Mechanical Engineering
+</div>
+<div class="dates">
+	2012
+</div>
+<div style="clear:both;"></div>
+
+Lehigh University
+
+Computer Science Minor
+
 
 ## Publications ##
 - [K. M. Hart, A. B. Goodman, and R. P. O’Shea, “Automatic Generation of Machine Learning Synthetic Data Using ROS,” in Artificial Intelligence in HCI, vol. 12797, H. Degen and S. Ntoa, Eds. Cham: Springer International Publishing, 2021, pp. 310–325. doi: 10.1007/978-3-030-77772-2_21.](/assets/papers/Automatic_Generation_of_Machine_Learning_Synthetic_Data_Using_ROS.pdf)
@@ -27,6 +107,7 @@ TBD
 
 ## Presentations ##
 - K. M. Hart, “Automatic Generation of Machine Learning Synthetic Data Using ROS,” presented at the HCI International 2021, Virtual, Jul. 25, 2021.
+- [K. M. Hart and N. Kumia, “Cooperative Unmanned Air Systems and Robots for Remote Explosive Ordnance Disposal,” presented at the CURRE ANTX Demonstration, Patuxent River, MD, Aug. 2019. [Online]. Available: https://www.youtube.com/watch?v=bUR8KhWFlOI](https://www.youtube.com/watch?v=bUR8KhWFlOI)
 - K. Hart, “Towards Autonomous Weapons Movement on an Aircraft Carrier: Autonomous Swarm Parking,” presented at the HCI International 2018, Las Vegas, NV, Jul. 18, 2018.
 
 ## Interest Areas ##
