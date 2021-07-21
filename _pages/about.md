@@ -9,9 +9,10 @@ author_profile: true
 
 ## About Me ##
 I am a passionate, self-driven robotics researcher. Since growing up with Star Wars, I have always been fascinated with
-robotics. I've turned that interest into a fulfilling career that has allowed me to hone my researching abilities while
-also gaining experience in overseeing a broader research portfolio. Recently, I have expanded this knowledge even
-further by embarking on a part-time PhD program in addition to my full-time career.
+robotics and I've turned that interest into a fulfilling career that has allowed me to hone my researching abilities
+while overseeing a broader research portfolio. Recently, I have expanded this knowledge even further by embarking on a
+part-time PhD program in addition to my full-time career. I've started this site to share in my progress, practice my
+writing, document my projects, and pass on useful information I've discovered along the way.
 
 ## Work Experience ##
 <div class="title">
@@ -23,10 +24,10 @@ further by embarking on a part-time PhD program in addition to my full-time care
 <div style="clear:both;"></div>
 
 Robotics and Intelligent Systems Engineering Lab, Department of the Navy
-- Lead a lab of 6 full time researchers, 2 part time researchers, and numerous rotations and interns with an annual operating budget of approximately $1.3M.
-- Develop the lab's strategic roadmap and ensure team has requisite support for executing to the roadmap.
-- Represent the lab throughout the command and greater robotics community, including briefs to Admirals and other executives.
-- Develop and document best practices such as code reviews and lab 101 tutorials for new employees.
+- Lead a lab of 6 full time researchers, 2 part time researchers, and numerous rotations and interns with an annual operating budget of approximately $1.3M
+- Develop the lab's strategic roadmap and ensure team has requisite support for executing to the roadmap
+- Represent the lab throughout the command and greater robotics community, including briefs to Admirals and other executives
+- Develop and document best practices such as code reviews and lab 101 tutorials for new employees
 
 <div class="title">
 	Robotics Integration Lead
@@ -37,12 +38,12 @@ Robotics and Intelligent Systems Engineering Lab, Department of the Navy
 <div style="clear:both;"></div>
 
 Robotics and Intelligent Systems Engineering Lab, Department of the Navy
-- Use R&D roadmaps to develop relevant project proposals, landing 8 projects for $1.25M in funding.
-- Lead multiple projects, including tracking funding, annual reports, publications, and documentation. Projects include:
+- Use R&D roadmaps to develop relevant project proposals, landing 8 projects for $1.25M in funding
+- Lead multiple projects, including tracking funding, annual reports, publications, and documentation; projects include:
 	- Ground texture SLAM system
 	- Neural networks for automated deck tracking
 	- Autonomous recovery of an EOD robot
-- Design robot component integration framework to speed integration of sensors for tests.
+- Design robot component integration framework to speed integration of sensors for tests
 
 <div class="title">
 	Robotics Engineer
@@ -53,11 +54,11 @@ Robotics and Intelligent Systems Engineering Lab, Department of the Navy
 <div style="clear:both;"></div>
 
 Robotics and Intelligent Systems Engineering Lab, Department of the Navy
-- Work with other autonomy researchers on autonomy and AI projects. Examples include:
-	- Parking arbitrarily sized swarms on a carrier.
-	- Sensor fusion for localization in degraded environments, particularly fog.
-	- Surveys of the impact of autonomous manipulation on deck operations.
-- Spearhead lab best practices related to version control and issue tracking.
+- Work with other autonomy researchers on autonomy and AI projects; examples include:
+	- Parking arbitrarily sized swarms on a carrier
+	- Sensor fusion for localization in degraded environments, particularly fog
+	- Surveys of the impact of autonomous manipulation on deck operations
+- Spearhead lab best practices related to version control and issue tracking
 
 ## Education ##
 <div class="title">
@@ -111,7 +112,7 @@ Computer Science Minor
 - K. Hart, “Towards Autonomous Weapons Movement on an Aircraft Carrier: Autonomous Swarm Parking,” presented at the HCI International 2018, Las Vegas, NV, Jul. 18, 2018.
 
 ## Interest Areas ##
-- Monocular SLAM using only ground textures
+- Monocular SLAM using ground textures
 - Autonomous operations in sparse/restrictive environments
 - Autonomous architectures
 - Quality software development practices
