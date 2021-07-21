@@ -28,7 +28,7 @@ turtlesim_teleop:
       alt: "A turtle swimming in the water."
       title: turtlesim_teleop
       excerpt: "A ROS2 package to control the turtlesim demonstration via keyboard. This is mainly to practice working
-      with ROS2."
+      with ROS2 and has only basic capability at the moment due to other priorities."
       url: https://kylerobots.github.io/turtlesim_teleop/
 mnist_viewer:
     - image_path: assets/images/MnistExamples.png

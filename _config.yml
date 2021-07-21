@@ -1,4 +1,4 @@
-title: kylerobots personal site
+title: Kyle M. Hart
 description: >- # this means to ignore newlines until "baseurl:"
   This is my simple website to showcase some of the neat projects that
   I work on and the various tutorials that I use.
@@ -10,16 +10,26 @@ repository: "kylerobots/kylerobots.github.io"
 
 # Author information
 author:
-  name: "kylerobots"
-  bio: "A robotics engineer who enjoys tinkering with different programming projects in their very limited spare time."
+  name: "Kyle M. Hart"
+  avatar: "/assets/images/Headshot.jpg"
+  bio: "He/Him. Part-time robotics PhD candidate. Full-time lab director. Sometimes has a spare moment."
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: "mailto:kyle.m.hart@gmail.com"
+    - label: "ORCID"
+      icon: "fab fa-fw fa-orcid"
+      url: "https://orcid.org/0000-0001-8254-5722"
+    - label: "Google Scholar"
+      icon: "fab fa-fw fa-google"
+      url: "https://scholar.google.com/citations?user=fkaLvH4AAAAJ&hl=en&oi=ao"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/kylerobots"
 
 # Build settings
 remote_theme: "mmistakes/minimal-mistakes"
-minimal_mistakes_skin: "dirt"
+minimal_mistakes_skin: "air"
 plugins:
   - jekyll-feed
   - jekyll-include-cache

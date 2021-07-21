@@ -1,0 +1,16 @@
+h2 {
+	color: rgb(117, 117, 117);
+	text-align: right;
+}
+
+.title {
+	font-weight: bold;
+	float:left;
+	text-transform: uppercase;
+}
+
+.dates {
+	float:right;
+	font-style: italic;
+	text-align: right;
+}
