@@ -1,55 +1,17 @@
 ---
-title: Unit Tests, Code Coverage, and Static Analysis for C++
+title: "C++ Testing Part 1: Unit Tests"
 classes: wide
 tag: Testing
 ---
-This tutorial will cover basic usage of several testing tools for C++ code. This includes
-[Google Test](https://google.github.io/googletest/) for unit testing, XXX for code coverage analysis, and XXX for static
-analysis. It will show you how to incorporate them into a project, including running them with GitHub Actions.
+This is part of a series covering basic usage of several testing tools for C++ code. This includes
+[Google Test](https://google.github.io/googletest/) for unit testing, [gcovr](https://gcovr.com/en/stable/index.html)
+for test coverage metrics, and [Clang-Tidy](https://clang.llvm.org/extra/clang-tidy/) for static analysis. This series
+will show you how to incorporate each tool into a project.
 
-# Why Test? #
-There are a ton of blogs out there extolling the virtues of testing. I won't rehash that all here. Simply, testing goes
-a long way to improving code quality. Even if you only implement a little bit, testing can help you find bugs early on
-and help prevent bugs later when you add new features. It is worth your time to perform testing.
-
-# Getting Started: Triangle Classification #
-It's best to learn by example, so this guide will use a simple C++ library as it's test candidate. This library can be
-[found on GitHub](https://github.com/kylerobots/cpp-unit-test-example). We start with no test tools and slowly add them
-in each section of the guide. The library in question will help us perform triangle classification! If you remember from
-school, triangles fall into one of three categories depending on the relative length of their three sides (ignoring
-right triangles). The categories are:
-
-| Category | Description |
-| --- | --- |
-| Equilateral | All three sides are the same length |
-| Isosceles | Two sides are the same length and the other is different |
-| Scalene | All three sides are different lengths |
-
-This library provides a function that takes the three side lengths as arguments and returns the category type,
-represented as an enum. The initial code for this function is shown below. If you inspect the code closely, you might be
-able to spot some errors. However, the goal is to identify these faults with our different test tools.
-
-```cpp
-TriangleType classify_triangle(double side1, double side2, double side3) {
-  if (side1 == side2 && side2 == side3) {
-    return TriangleType::EQUILATERAL;
-  } else if (side1 == side2 && side2 != side3) {
-    return TriangleType::ISOSCELES;
-  } else {
-    return TriangleType::SCALENE;
-  }
-}
-```
-
-This code can be found under the *testless* tag in the `src/classify_triangle.cpp` file. In addition, this repository
-also contains files for VS Code, Docker, and CMake. CMake is required for this guide, but the others are not. There is
-also a simple example implementation that just calls the function with some arbitrary arguments.
-
-# Part One: Unit Tests #
-This next part will demonstrate how to add unit tests with [Google Test](https://google.github.io/googletest/). There
-are several different unit testing frameworks out there, but this is a fairly popular one with good documentation. In
-fact, almost everything covered here can also be found in their documentation in one way or another. Additionally, they
-cover several advance usages that are not covered here. This tutorial includes just the basics on getting it integrated.
+This is Part 1 of the series that adds unit tests with [Google Test](https://google.github.io/googletest/). There are
+several different unit testing frameworks out there, but this is a fairly popular one with good documentation. In fact,
+almost everything covered here can also be found in their documentation in one way or another. Additionally, they cover
+several advance usages that are not covered here. This tutorial includes just the basics on getting it integrated.
 
 ## CMakeLists.txt ##
 
@@ -125,7 +87,7 @@ The next part instructs CMake to download Google Test during configuration. Spec
 4. Include the module in your project
 
 The FetchContent module can fetch from Git repositories, SVN repositories, and URL locations of other CMake-based
-projects. By specifying modules this way, you avoid the need to retrieve the content manually or using Git Submodules.
+projects. By specifying modules this way, you avoid the need to retrieve the content manually or use Git Submodules.
 This also keeps your repository cleaner. However, it runs at configure time, so each time you touch your CMakeLists.txt
 file, it will download again. For Google Test, this isn't too slow, but the configure time can add up if you are
 fetching many different modules.
@@ -180,7 +142,7 @@ definitions of whatever it is you are testing. After that, you write out each te
 side. The first argument for TEST is the name of the test suite while the second is the name of this specific test.
 These will be shown on the result page, so provide good names.
 
-Then, the function should perform whatever operations it needs to test and comparisons. In this case, it is testing for
+Then, the function should perform whatever operations it needs to test and compare. In this case, it is testing for
 equality between the result and the expected category. `ASSERT_*` tests will stop the particular test if they fail,
 while `EXPECT_*` will only note the failure and try the rest of the function.
 
@@ -202,7 +164,8 @@ ctest
 ```
 This will run every test referenced in the *gtest_discover_tests* functions in your CMakeLists.txt file. It will run
 them and provide the results to the terminal. The *-VV* argument provides extra information even for passed tests. You
-will get an output like so:
+will get an output like that shown below. If you work in VS Code and have the CMake and C++ Extensions, you can also
+run tests directly within VS Code, which can speed up development.
 
 ```bash
 Test project /workspaces/cpp-unit-test-example/build
@@ -231,7 +194,7 @@ Errors while running CTest
 As shown, several of our tests don't pass. This is actually good! Assuming the tests don't have bugs, you can now focus
 on changing the code as needed to pass all the tests. Using this method, I have found that I tend to finish my code a
 lot quicker, even if writing the tests takes a while. The tricky part is ensuring that the tests sufficiently cover
-every case (more on that next time).
+every case (more on that in Part 2).
 
 In this case, the tests helped identify a few issues. First, I had to ensure the order of the sides didn't matter in the
 logic. (e.g. so (3, 3, 5) and (3, 5, 3) are both isosceles triangles). I also had to add logic to ensure that the
@@ -258,9 +221,9 @@ Test project /workspaces/cpp-unit-test-example/build
 Total Test time (real) =   0.33 sec
 ```
 
-So by using Google Test for unit tests, I helped improve my code quality. It is easy to integrate in CMake, to make it
-very simple to include in any project that is already using CMake. After defining a number of useful tests, the output
-can then guide my development.
+So by using Google Test for unit tests, I helped improve my code quality. It is easy to integrate in CMake, which makes
+it very simple to include in any project that is already using CMake. After defining a number of useful tests, the
+output can then guide my development.
 
 The upgraded code with unit tests is found in [this repository](https://github.com/kylerobots/cpp-unit-test-example),
 under the *unit-test* tag.
