@@ -3,6 +3,10 @@ title: My Work Environment
 classes: wide
 tag: Workflow
 ---
+***Note:*** As a brief disclaimer, I no longer use this particular setup. I've migrated to Docker for pretty much
+everything. I am leaving this here for anyone that may find it useful.
+
+
 I have a rather unusual development setup, including multiple devices. Additionally, I hate spending time configuring
 the same things across each device, as I inevitably miss something. Especially for things like keyboard shortcuts, it is
 important to me to have consistency so that I don't have to remember which keys to press based on which computer I use.
