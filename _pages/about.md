@@ -24,10 +24,14 @@ writing, document my projects, and pass on useful information I've discovered al
 <div style="clear:both;"></div>
 
 Robotics and Intelligent Systems Engineering Lab, Department of the Navy
-- Lead a lab of 6 full time researchers, 2 part time researchers, and numerous rotations and interns with an annual operating budget of approximately $1.3M
-- Develop the lab's strategic roadmap and ensure team has requisite support for executing to the roadmap
-- Represent the lab throughout the command and greater robotics community, including briefs to Admirals and other executives
-- Develop and document best practices such as code reviews and lab 101 tutorials for new employees
+- Lead a lab of 9 full time researchers, 2 part time researchers, and numerous rotations and interns with an annual operating budget of approximately $1.3M
+- Developed roadmap and strategic plan to guide lab’s project proposals, hiring plan, and training requests
+- Created 101 tutorial with case study and setup guides to teach new members essential tools
+- Wrote code review SOP to improve efficiency merging in new software features
+-	Implemented SOPs for rotation recruitment and onboarding to reduce time and effort securing quality rotations
+- Worked with IT to shift lab from unconnected to connected computers without disrupting workflow, decreasing support costs and increasing team collaboration
+- Guided 5 mentees in identifying strategic rotations that expanded their knowledge and brought enhanced capabilities back to the lab
+- Regularly provide briefs ranging from admirals to high school students, tailoring each brief to the audience
 
 <div class="title">
 	Robotics Integration Lead
@@ -38,15 +42,17 @@ Robotics and Intelligent Systems Engineering Lab, Department of the Navy
 <div style="clear:both;"></div>
 
 Robotics and Intelligent Systems Engineering Lab, Department of the Navy
-- Use R&D roadmaps to develop relevant project proposals, landing 8 projects for $1.25M in funding
-- Lead multiple projects, including tracking funding, annual reports, publications, and documentation; projects include:
-	- Ground texture SLAM system
-	- Neural networks for automated deck tracking
-	- Autonomous recovery of an EOD robot
+- Wrote, briefed, and was successfully awarded 7 research projects totaling approximately $1M
+-	Implementing a vision-only simultaneous localization and mapping system for ground robot navigation
+-	Developed automated test routine to tune and compare various point cloud registration algorithms
+-	Rapidly developed a remote-controlled forklift to access OSHA condemned building containing $10M of Fleet critical equipment, receiving recognition from the command’s admiral
+-	Developed an autonomous vision-based navigation system to allow a COTS bomb disposal robot to identify and drive to its storage crate
+-	Trained a neural network to track aircraft, people, and equipment as they traveled about the carrier deck
+-	Developed an automated object recognition dataset generator using Gazebo and ROS
 - Design robot component integration framework to speed integration of sensors for tests
 
 <div class="title">
-	Robotics Engineer
+	Mechanical Engineer
 </div>
 <div class="dates">
 	2013-2018
@@ -54,11 +60,9 @@ Robotics and Intelligent Systems Engineering Lab, Department of the Navy
 <div style="clear:both;"></div>
 
 Robotics and Intelligent Systems Engineering Lab, Department of the Navy
-- Work with other autonomy researchers on autonomy and AI projects; examples include:
-	- Parking arbitrarily sized swarms on a carrier
-	- Sensor fusion for localization in degraded environments, particularly fog
-	- Surveys of the impact of autonomous manipulation on deck operations
-- Spearhead lab best practices related to version control and issue tracking
+-	Implemented version control and issue tracking SOPs for entire lab
+-	Developed sensor fusion algorithm to explore operations in degraded environmental conditions
+-	Developed autonomous parking movement algorithm and implemented in ROS move_base as a plugin
 
 ## Education ##
 <div class="title">
@@ -111,6 +115,16 @@ Computer Science Minor
 - [K. M. Hart, “Automatic Generation of Machine Learning Synthetic Data Using ROS,” presented at the HCI International 2021, Virtual, Jul. 25, 2021.](https://drive.google.com/file/d/1G-mnzDOK0mjHeCWuimCk-Ent7LIG4dSD/view?usp=sharing)
 - [K. M. Hart and N. Kumia, “Cooperative Unmanned Air Systems and Robots for Remote Explosive Ordnance Disposal,” presented at the CURRE ANTX Demonstration, Patuxent River, MD, Aug. 2019. [Online]. Available: https://www.youtube.com/watch?v=bUR8KhWFlOI](https://www.youtube.com/watch?v=bUR8KhWFlOI)
 - K. Hart, “Towards Autonomous Weapons Movement on an Aircraft Carrier: Autonomous Swarm Parking,” presented at the HCI International 2018, Las Vegas, NV, Jul. 18, 2018.
+
+## Skills ##
+- ROS/ROS2
+- C++
+- Python
+- Docker
+- CMake
+- Git
+- GitHub/GitLab CI Pipelines
+- Unit Testing/Googletest
 
 ## Interest Areas ##
 - Monocular SLAM using ground textures
