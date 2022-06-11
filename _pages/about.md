@@ -105,7 +105,7 @@ Computer Science Minor
 
 
 ## Publications ##
-- G. J. Hwang, A. Katre, K. M. Hart, and C. A. Rea, “Analysis Techniques of Autonomy Framework Metrics for Autonomous Developers,” presented at the Autonomous Systems: Sensors, Processing and Security for Ground, Air, Sea and Space Vehicles and Infrastructure 2022, Orlando, FL, Apr. 2022.
+- G. Hwang, A. Katre, K. Hart, and C. Rea, “Analysis techniques of autonomy framework metrics for autonomous developers,” in Autonomous Systems: Sensors, Processing and Security for Ground, Air, Sea and Space Vehicles and Infrastructure 2022, Orlando, United States, Jun. 2022, p. 15. doi: 10.1117/12.2623376.
 - [K. M. Hart, A. B. Goodman, and R. P. O’Shea, “Automatic Generation of Machine Learning Synthetic Data Using ROS,” in Artificial Intelligence in HCI, vol. 12797, H. Degen and S. Ntoa, Eds. Cham: Springer International Publishing, 2021, pp. 310–325. doi: 10.1007/978-3-030-77772-2_21.](/assets/papers/Automatic_Generation_of_Machine_Learning_Synthetic_Data_Using_ROS.pdf)
 - [J. Hing, K. Hart, and A. Goodman, “Towards Autonomous Weapons Movement on an Aircraft Carrier: Autonomous Swarm Parking,” in Human Interface and the Management of Information. Information in Applications and Services, vol. 10905, S. Yamamoto and H. Mori, Eds. Cham: Springer International Publishing, 2018, pp. 403–418. doi: 10.1007/978-3-319-92046-7_34.](/assets/papers/Towards_Autonomous_Weapons_Movement_on_an_Aircraft_Carrier-Autonomous_Swarm_Parking.pdf)
 - [J. Hing, R. Boczar, and K. Hart, “Parking Autonomous Skids,” in Human Interface and the Management of Information. Information and Knowledge in Context, Cham, 2015, pp. 557–568. doi: 10.1007/978-3-319-20618-9_55.](/assets/papers/Parking_Autonomous_Skids.pdf)
