@@ -112,7 +112,7 @@ Computer Science Minor
 - [K. Hart et al., “RoSCAR: robot stock car autonomous racing,” in Proceedings of the 2014 workshop on Mobile augmented reality and robotic technology-based systems, Bretton Woods, New Hampshire, USA, Jun. 2014, pp. 3–8. doi: 10.1145/2609829.2609837.](/assets/papers/RoSCAR-Robot_Stock_Car_Autonomous_Racing.pdf)
 
 ## Presentations ##
-- [K. M. Hart, “Automatic Generation of Machine Learning Synthetic Data Using ROS,” presented at the HCI International 2021, Virtual, Jul. 25, 2021.](https://drive.google.com/file/d/1G-mnzDOK0mjHeCWuimCk-Ent7LIG4dSD/view?usp=sharing)
+- [K. M. Hart, “Automatic Generation of Machine Learning Synthetic Data Using ROS,” presented at the HCI International 2021, Virtual, Jul. 25, 2021.](https://youtu.be/QN4_1_gpNXY)
 - [K. M. Hart and N. Kumia, “Cooperative Unmanned Air Systems and Robots for Remote Explosive Ordnance Disposal,” presented at the CURRE ANTX Demonstration, Patuxent River, MD, Aug. 2019. [Online]. Available: https://www.youtube.com/watch?v=bUR8KhWFlOI](https://www.youtube.com/watch?v=bUR8KhWFlOI)
 - K. Hart, “Towards Autonomous Weapons Movement on an Aircraft Carrier: Autonomous Swarm Parking,” presented at the HCI International 2018, Las Vegas, NV, Jul. 18, 2018.
 
