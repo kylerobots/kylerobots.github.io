@@ -6,7 +6,7 @@ header:
     overlay_color: "#000"
     overlay_filter: "0.5"
     overlay_image: /assets/images/PortfolioCropped.jpg
-excerpt: My personal programming projects
+excerpt: My personal (and some shareable work) programming projects
 intro:
     - excerpt: All photos courtesy of [**Unsplash**](https://unsplash.com)
 algorithm:
@@ -17,13 +17,21 @@ algorithm:
       title: "Algorithms"
       excerpt: "Some practice code from my Algorithms course."
       url: https://kylerobots.github.io/algorithms/
-ground_texture:
-    - image_path: assets/images/WoodFloor.jpg
+ground_texture_sim:
+    - image_path: assets/images/BrickFloor.jpg
       alt: "A picture of wood floors."
       title: "Ground Texture Sim"
-      excerpt: "A tool to simulate realistic ground textures for use in downward facing monocular SLAM applications. 
+      excerpt: "A tool to simulate realistic ground textures for use in downward facing monocular SLAM applications.
       This is to help generate data for my PhD research."
       url: https://kylerobots.github.io/ground-texture-sim/
+ground_texture_slam:
+    - image_path: assets/images/WoodFloor.jpg
+      alt: "A picture of a brick walkway."
+      title: "Ground Texture SLAM"
+      excerpt: "A SLAM system that navigates using only images of the ground, as described in
+      [this paper](/assets/papers/Monocular_SLAM_using_Ground_Textures.pdf) and
+      [this presentation](https://youtu.be/oEs1oxBMbQ0)"
+      url: https://github.com/Navy-RISE-Lab/ground-texture-slam
 k_armed_bandit:
     - image_path: assets/images/SlotMachine.jpg
       alt: "k-Armed Bandit"
@@ -45,7 +53,8 @@ turtlesim_teleop:
       url: https://kylerobots.github.io/turtlesim_teleop/
 ---
 {% include feature_row id="intro" type="center" %}
-{% include feature_row id="ground_texture" type="right" %}
+{% include feature_row id="ground_texture_slam" type="left" %}
+{% include feature_row id="ground_texture_sim" type="right" %}
 {% include feature_row id="k_armed_bandit" type="left" %}
 {% include feature_row id="algorithm" type="right" %}
 {% include feature_row id="turtlesim_teleop" type="left" %}
